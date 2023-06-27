@@ -22,3 +22,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Python
+.python-version
+ganarcrm_django/ganarcrm_django/__pycache__
