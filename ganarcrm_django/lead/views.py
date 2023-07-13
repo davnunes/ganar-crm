@@ -8,5 +8,8 @@ from .serializers import LeadSerializer
 
 
 class LeadViewSet(viewsets.ModelViewSet):
-    # todo: create serializers (video is on 1:11:57 minute)
-    pass
+    serializer_class = LeadSerializer
+    queryset = Lead.objects.all()
+
+    def get_queryset(self):
+        return self.queryset.filter(created_by=self.request.user)
